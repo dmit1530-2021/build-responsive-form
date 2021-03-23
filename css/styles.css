@@ -1,2 +1,130 @@
 /* CSS Variables - https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 
+:root{
+    --white: #fff;
+    --dk-blue: #0d1238;
+    --lg-blue: #272f70;
+    --dk-green: #374d12;
+    --lg-green: #54761b;
+
+}
+
+
+body{
+    font-family: sans-serif;
+    color: var(--white);
+    background-image: url(../img/oriental-tiles.png);
+}
+
+/* *****global typography***** */
+h2{
+    font-size: 3rem;
+    font-family: serif;
+    margin-bottom: 1.5rem;
+}
+
+h3{
+    padding: 0 0.75rem;
+}
+
+p{
+    margin-bottom: 1.5rem;
+}
+
+/* form section */
+section{
+    margin-top: 5rem 0;
+    padding: 1rem;
+    background-color: rgba(13, 18, 56, 0.7);
+}
+
+fieldset{
+    padding: 0;
+    border: none;
+    background-color: var(--white);
+    color: var(--dk-blue);
+    border-radius: 5px;
+}
+
+fieldset > p{
+    background-color: var(--lg-green);
+    color: var(--white);
+    padding: 0.75rem;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+fieldset > div{
+    padding: 0.75rem;
+}
+
+.flex-container{
+    display:flex;
+    flex-flow: wrap;
+
+}
+
+.flex-container > div {
+    flex: 0 1 50%;
+    margin-bottom: 0.75rem;
+}
+
+fieldset > div > label {
+    display: block;
+}
+
+fieldset > div > input{
+    width: 100%;
+    border: 1px solid #a2adb7;
+    background-color: #edeff0;
+    line-height: 2.5rem;
+    padding-left: 0.5rem;
+    border-radius: 5px;
+}
+
+fieldset > div > input[type=submit] {
+    background-color: var(--lg-blue);
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+fieldset > div > input[type=submit]:hover{
+    background-color: var(--dk-blue);
+    cursor: pointer;
+}
+
+fieldset a{
+    color: var(--lg-green);
+    text-decoration: none;
+}
+
+fieldset a:hover{
+    color: var(--dk-green);
+}
+
+
+
+@media only screen and (min-width: 1000px){
+
+section{
+    display: flex;
+}
+
+fieldset{
+    width: 40.625rem;
+}
+
+section > div{
+    padding-right: 1.0rem;
+}
+
+@media only screen and (min-width: 1440px){
+
+section{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+    
+}
+}
